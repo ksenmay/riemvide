@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pinkSwan">#C0B5B3</color>
+    <color name="doveGray">#706B68</color>
+    <color name="weige">#6E5363</color>
+    <color name="deepcofee">#684145</color>ZZZ
+    <color name="woodsmoke">#100e11</color>
+    <color name="darkgray">#2d2a2e</color>
+    <color name="manatee">#7C7376</color>
+    <color name="softgray">#CACED2</color>
+    <color name="softred">#3B0B0A</color>
+    <color name="errorred">#A70000</color>
+    <color name="grayone">#828182</color>
+    <color name="graytwo">#bfbdbd</color>
+    <color name="windowgray">#515151</color>
+    <color name="lightgray">#7d7d7d</color>
+    <color name="gray1">#a0a0a0</color>
+    <color name="gray2">#7b7b7b</color>
+    <color name="gray3">#47484c</color>
+
+</resources>

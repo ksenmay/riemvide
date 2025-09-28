@@ -1,0 +1,85 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_anim">
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="280dp"
+        android:layout_height="80dp"
+        android:background="@drawable/rounded_button"
+        android:text="Начать игру"
+        android:fontFamily="@font/f3"
+        android:textColor="@color/softgray"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        />
+
+
+    <ImageButton
+        android:id="@+id/wardrobeButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/rounded_button"
+        android:contentDescription="гардероб"
+        android:fontFamily="@font/f3"
+        android:padding="15dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/wardrobe"
+        android:textColor="@color/softgray"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startButton"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <ImageButton
+        android:id="@+id/resetButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/rounded_button"
+        android:contentDescription="заново"
+        android:fontFamily="@font/f3"
+        android:padding="15dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/reset"
+        android:textColor="@color/softgray"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startButton"
+        app:layout_constraintVertical_bias="0.05" />
+
+
+    <ImageButton
+        android:id="@+id/chaptersButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/rounded_button"
+        android:contentDescription="главы"
+        android:fontFamily="@font/f3"
+        android:padding="15dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/buclet"
+        android:textColor="@color/softgray"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.803"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startButton"
+        app:layout_constraintVertical_bias="0.049" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,47 @@
+[title="отладка"]
+[node
+[scene]
+[char=elis]
+[name=Элис]
+[background=b3]
+Меня зовут Элис
+Я охотник на вампиров.
+[scene]
+[char=main]
+[name={name}]
+[background=b3]
+Пора сделать выбор[choice="aaaaaaaaaaaaaaaaa<stat=adaptation 2>;мяу блять <stat=adaptation -2>"]
+пипец
+жоска
+[scene]
+[char=elis]
+[name=Элис]
+[background=b3]
+я хочу [choice="суши<stat=adaptation 1>;кофе <stat=coldBloodedness -1>; съесть твою поджелудочную<stat=elis 3>; чай <stat=elis -2>"]
+это какойто полный мяумяу
+ПИЗДЕЦ ПРОСТО
+[scene]
+[char=main]
+[name={name}]
+[background=b3]
+рил
+жесть [choice="суши<stat=adaptation 1>;кофе"]
+<fork=[stats=adaptation 2;elis 3]>
+[scene]
+[char=elis]
+[name=Элис]
+[background=b3]
+вот это нифига себе развилочка ихиххихихи
+окак
+пздц
+[scene]
+[char=main]
+[name={name}]
+[background=b3]
+жесть
+</fork>
+[scene]
+[char=elis]
+[name=Элис]
+[background=b3]
+полный мяу мяу
