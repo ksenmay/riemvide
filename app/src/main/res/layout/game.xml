@@ -39,9 +39,8 @@
 
     <Button
         android:id="@+id/settingsButton"
-        android:layout_width="160dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="30dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/choice_button"
         android:fontFamily="@font/f3"
         android:text="Настройки"
@@ -49,23 +48,12 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/topTouchArea"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/topTouchArea" />
-
-    <Button
-        android:id="@+id/wardrobeButton2"
-        android:layout_width="160dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="30dp"
-        android:background="@drawable/choice_button"
-        android:fontFamily="@font/f3"
-        android:text="Гардероб"
-        android:textColor="@color/softgray"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/topTouchArea"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/topTouchArea" />
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/topTouchArea"
+        app:layout_constraintWidth_percent="0.5"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <ImageView
         android:id="@+id/characterImage"

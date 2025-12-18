@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -181,6 +182,7 @@ public class VisualManager {
         }
 
         previousCharacter = character;
+        System.out.println("Current character: " + getCurrentCharacter());
 
         movingCharacter();
 
@@ -222,6 +224,7 @@ public class VisualManager {
         else {
             backgroundImageView.setVisibility(View.INVISIBLE);
         }
+        System.out.println("Current background: " + getCurrentBackground());
 
     }
 
@@ -348,4 +351,27 @@ public class VisualManager {
         return touchArea;
     }
 
+    public Activity getActivity() {
+        return activity;
+    }
+
+    public ImageView getBackgroundImageView() {
+        return backgroundImageView;
+    }
+
+    public ImageView getCharacterImageView() {
+        return characterImageView;
+    }
+
+    public GameProgress getGameProgress() {
+        return gameProgress;
+    }
+
+    public TextView getNameTextView() {
+        return nameTextView;
+    }
+
+    public String getPreviousCharacter() {
+        return previousCharacter;
+    }
 }

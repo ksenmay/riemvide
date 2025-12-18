@@ -4,10 +4,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.AssetManager;
-import android.graphics.drawable.Drawable;
 import android.util.Log;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 
 public class MainCharManager {
@@ -61,25 +59,6 @@ public class MainCharManager {
 
     }
 
-    public ArrayList<Drawable> getDrawables(Activity activity) {
-
-        String[] looks = findLook(activity);
-        ArrayList<Drawable> looksImages = new ArrayList<>();
-
-        AssetManager assetManager = activity.getAssets();
-        try {
-            for (String look : looks) {
-                try (InputStream is = assetManager.open("looks/" + look)) {
-                    looksImages.add(Drawable.createFromStream(is, null));
-                }
-            }
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
-        return looksImages;
-    }
-
     public void logAllStats() {
         int adaptation = sp.getInt("adaptation", -1);
         int coldBloodedness = sp.getInt("coldBloodedness", -1);
@@ -107,5 +86,7 @@ public class MainCharManager {
     public String getLook() {
         return sp.getString("current look", "look1.png");
     }
+
+
 
 }

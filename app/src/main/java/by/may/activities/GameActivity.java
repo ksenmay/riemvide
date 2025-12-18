@@ -2,6 +2,8 @@ package by.may.activities;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
 import by.may.R;
 import by.may.engine.ActivityControl;
@@ -21,11 +23,10 @@ public class GameActivity extends AppCompatActivity {
         engine = new Engine(this);
         engine.init();
         engine.getMusicManager().loadSavedMusic();
-
         ActivityControl control = engine.getControl();
+        control.setupTop();
         uiSetting = new UIsetting(this);
         uiSetting.hideSystemUI();
-        control.setupTop();
     }
 
     @Override

@@ -59,7 +59,6 @@ public class Engine {
 
     public void showCurrentLine() {
 
-
         Log.d("выбор", String.valueOf(isChoice));
         Log.d("блокировка", String.valueOf(isInputLocked));
 

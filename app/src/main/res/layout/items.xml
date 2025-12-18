@@ -10,7 +10,7 @@
         android:id="@+id/itemTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/closed_chapter"
+        android:background="@drawable/rounded_button"
         android:fontFamily="@font/f3"
         android:padding="30dp"
         android:text="Заголовок"

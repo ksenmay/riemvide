@@ -13,6 +13,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -48,7 +49,6 @@ public class ActivityControl {
     public ImageButton resetButton;
     public ConstraintLayout layout;
     private Button settingTopButton;
-    private Button wardrobeTopButton;
     public SettingFragment setting = new SettingFragment();
 
     public ActivityControl(Activity activity, Engine engine) {
@@ -402,35 +402,29 @@ public class ActivityControl {
 
     public void setupTop() {
 
-        wardrobeTopButton = activity.findViewById(R.id.wardrobeButton2);
         settingTopButton = activity.findViewById(R.id.settingsButton);
         View topTouchArea = activity.findViewById(R.id.topTouchArea);
 
-        wardrobeTopButton.setOnClickListener(v -> openWardrobe());
         settingTopButton.setOnClickListener(v -> {
             openSetting();
             engine.getVisual().getTouchArea().setEnabled(true);
         });
 
         settingTopButton.setVisibility(View.GONE);
-        wardrobeTopButton.setVisibility(View.GONE);
 
         topTouchArea.setOnClickListener(v -> {
 
             if (settingTopButton.getVisibility() == View.GONE) {
 
                 settingTopButton.setVisibility(View.VISIBLE);
-                wardrobeTopButton.setVisibility(View.VISIBLE);
+
 
                 settingTopButton.setAlpha(0.0f);
-                wardrobeTopButton.setAlpha(0.0f);
 
                 settingTopButton.animate().alpha(0.85f).setDuration(300).start();
-                wardrobeTopButton.animate().alpha(0.85f).setDuration(300).start();
 
                 new Handler().postDelayed(() -> {
                     settingTopButton.animate().alpha(0.0f).setDuration(300).withEndAction(() -> settingTopButton.setVisibility(View.GONE)).start();
-                    wardrobeTopButton.animate().alpha(0.0f).setDuration(300).withEndAction(() -> wardrobeTopButton.setVisibility(View.GONE)).start();
                 }, 3000);
             }
         });

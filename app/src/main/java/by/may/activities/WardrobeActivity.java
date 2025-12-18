@@ -33,42 +33,7 @@ public class WardrobeActivity extends AppCompatActivity {
         setContentView(R.layout.wardrobe);
 
         lookWardrobe = findViewById(R.id.look_wardrobe);
-        charManager = new MainCharManager(this);
 
-        looks = charManager.findLook(this);
-        mainCharLooks = charManager.getDrawables(this);
-
-        String currentLook = charManager.getLook();
-        for (int i = 0; i < looks.length; i++) {
-            if (looks[i].equals(currentLook)) {
-                currentIndex = i;
-                break;
-            }
-        }
-
-        showCurrentLook();
-
-        ImageButton arrowRight = findViewById(R.id.arrow_right);
-        ImageButton arrowLeft = findViewById(R.id.arrow_left);
-
-        arrowRight.setOnClickListener(v -> {
-            currentIndex++;
-            if (currentIndex >= looks.length) currentIndex = 0;
-            showCurrentLook();
-        });
-
-        arrowLeft.setOnClickListener(v -> {
-            currentIndex--;
-            if (currentIndex < 0) currentIndex = looks.length - 1;
-            showCurrentLook();
-        });
-
-        findViewById(R.id.confirm_button).setOnClickListener(v -> {
-            charManager.setLook(looks[currentIndex]);
-        });
-
-        Log.d("WardrobeActivity", "arrowRight: " + arrowRight);
-        Log.d("WardrobeActivity", "arrowLeft: " + arrowLeft);
 
         uiSetting = new UIsetting(this);
         uiSetting.hideSystemUI();
