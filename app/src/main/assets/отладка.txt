@@ -1,0 +1,46 @@
+[title="демонстрация развилок"]
+[node
+[scene]
+[char=elis]
+[name=Элис]
+[music=normal]
+[background=b3]
+Меня зовут Элис
+фраза 2
+[scene]
+[char=main]
+[name={name}]
+[background=b3]
+Выборы (2) [choice="выбор 1<stat=adaptation 2>;выбор 2 <stat=adaptation -2>"]
+Фраза 3
+Фраза 4
+[scene]
+[char=elis]
+[name=Элис]
+[background=b3]
+Выборы (4) [choice="выбор 1<stat=adaptation 1>;выбор 2 <stat=coldBloodedness -1>; выбор 3 <stat=elis 3>; выбор 4 <stat=elis -2>"]
+Фраза 5
+[scene]
+[music=oldlovestory]
+[char=main]
+[name={name}]
+[background=b3]
+рил
+Выборы [choice="выбор 1<stat=adaptation 1>;выбор 2"]
+<fork=[stats=adaptation 2;elis 3]>
+[scene]
+[char=elis]
+[name=Элис]
+[background=b3]
+Развилка
+[scene]
+[char=main]
+[name={name}]
+[background=b3]
+Фраза 6
+</fork>
+[scene]
+[char=elis]
+[name=Элис]
+[background=b3]
+мяу мяу
